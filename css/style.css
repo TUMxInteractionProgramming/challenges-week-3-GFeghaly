@@ -30,6 +30,11 @@ button, strong {
 h1 {
     background-color: #3F51B5;
     color: white;
+    font-family: "Roboto",arial, sans-serif;
+    height:64px;
+    padding:16px;
+    
+        
 }
 
 
@@ -41,6 +46,16 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    
+    
+    top:0;
+    bottom:0;
+    
+    height:inherit;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    
+    
 }
 
 li {
@@ -62,16 +77,20 @@ li.selected {
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
+
 }
 
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
-#tab-bar {
+#tab-bar, #chat-bar {
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -102,6 +121,7 @@ li img {
 /* MESSAGES */
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
 .message {
+    
     /* #3 #chat #width*/
     width: 80%;
 
@@ -110,36 +130,86 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+   
+    
 }
 
 
 .message h3 {
+    display:flex;
+    
     font-size: medium;
+    justify-content: space-between;
+    
+    
 }
 
 .message h3 em {
     font-size: larger;
     font-style: normal;
+    
 }
 
 .message h3 a {
     /* #3 #chat #link color is primary text */
     color: black;
+    
 }
 
 .message p {
+    display:flex;
     background-color: white;
     padding: 16px;
+    position:initial;
+    
 }
 
-.message button {
+.message p button{
+    
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
-}
+    
+    position: absolute;
+    right:150px;
+    
+ }
 
 /* #4 left align own #messages using #margins */
 .message.own {
     margin-left: 17.5%;
+    
+}
+
+.message.own p button{
+
+    background-color: #CDDC39;
+    color: black;
+    text-transform: uppercase;
+    
+    position: absolute;
+    right:25px; 
+}
+
+.channel-meta{
+    
+    position:absolute;
+    right:30px;
+    vertical-align: middle;
+    justify-content: space-around;
+            
+}
+#emojis-button{
+
+    background-color: white;
+    border:1px solid black;
+    padding:16px 16px;
+    top:284px;
+    left:16px;
+    font-size: 28px;
+    text-align: left;
+    height:inherit;
+    overflow-x: hidden;
+    overflow-y:scroll;
 }
 

@@ -1,0 +1,19 @@
+#channels{
+    position:absolute;
+    width:40%;
+    height:400px;
+    top:0;
+    left:0px;
+    
+
+}
+
+
+#chat{
+
+    position:absolute;
+    width:60%;
+    height:auto;   
+    right:0px;
+}
+
